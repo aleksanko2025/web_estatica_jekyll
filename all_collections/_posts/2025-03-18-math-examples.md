@@ -1,58 +1,47 @@
 ---
 layout: post
-title: Math Examples
-date: 2025-03-18
-categories: [tutorial, math]
+title: Instalación MongoDB (Debian 13)
+date: 2025-10-7
+categories: [Bases de Datos, 2ºASIR]
 ---
 
-# Math Support in Markdown
+# Instalación de servidor MongoDB
 
-This page demonstrates how to use math expressions in Markdown.
+Un pequeño tutorial para la instalación de MongoDB bajo Debian 13 (trixie).
 
-## Inline Math
-
-- Einstein's famous equation: $E = mc^2$
-- The Pythagorean theorem: $a^2 + b^2 = c^2$
-- A simple fraction: $\frac{1}{2}$
-
-## Display Math
-
-The quadratic formula:
-
-$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
-
-Maxwell's Equations:
-
-$$
-\begin{align}
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}} \\
-\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-\nabla \cdot \vec{\mathbf{B}} & = 0
-\end{align}
-$$
-
-A matrix:
-
-$$
-\begin{pmatrix}
-a & b & c \\
-d & e & f \\
-g & h & i
-\end{pmatrix}
-$$
-
-## Usage Instructions
-
-You can write math expressions in your Markdown files using:
-
-1. Inline math: `$...$` or `\(...\)`
-2. Display math: `$$...$$` or `\[...\]`
-
-For example, to write Einstein's equation inline, type `$E = mc^2$`.
-
-For a block equation like the quadratic formula, use:
+## Instalación de paquetería necesaria
 
 ```
-$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+sudo apt install curl gnupg
+```
+
+## Importamos clave GPG (al no estar Mongo en los repositorios oficiales de Debian)
+
+```
+curl -fsSL https://pgp.mongodb.com/server-8.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-8.0.gpg
+```
+
+## Añadimos el repositorios al sources list
+
+```
+echo "deb [signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg] https://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+```
+
+## Instalamos los paquetes de MongoDB
+
+```
+sudo apt update
+sudo apt install -y mongodb-org
+```
+
+## Aseguramos que el servicio inicie al arrancar
+
+```
+sudo systemctl enable mongod.service
+```
+
+## Acceder a la shell de Mongo
+
+```
+mongosh
 ```
