@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Instalación MongoDB (Debian 13)
-date: 2025-10-7
-categories: [Bases de Datos, 2ºASIR]
+date: 2025-10-08
+categories: [Bases de Datos, mongodb, 2ºASIR]
 ---
 
 ![alt](https://imgs.search.brave.com/rIljDd3e-JZc7DhL7Hs79Ut1ctqPYeMwviiERXYrfo8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL0pv/bkRvdHNveS9WZWN0/b3ItTG9nby9tYXN0/ZXIvTG9nb3MvbW9u/Z29kYi9Nb25nb0RC/LnN2Zw)

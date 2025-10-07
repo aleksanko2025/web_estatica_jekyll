@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Instalación GNS3 bajo Debian 12
-date: 1948-12-12 10:18:00
-categories: [Redes, 1ºASIR]
+date: 2025-10-07
+categories: [Redes, GNS3, 1ºASIR]
 ---
 
 ![alt](https://imgs.search.brave.com/vdkaF7loGk4diMnkGXVnQzN_i7pWbK7Rd-g6dhz7yCw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kb2Nz/LmduczMuY29tL2lt/Zy9sb2dvY29sb3Vy/LnBuZw)
