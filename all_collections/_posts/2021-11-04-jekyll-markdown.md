@@ -5,37 +5,37 @@ date: 2021-11-04
 categories: ["jekyll", "Test Post", "first post"]
 ---
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`
+El texto puede ser **negrita**, _cursiva_, ~~tachado~~ o `palabra clave`.
 
-[Link to another page](./another-page.html).
+[Enlace a otra página](./another-page.html).
 
-There should be whitespace between paragraphs.
+Debe haber espacio en blanco entre párrafos.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+Debe haber espacio en blanco entre párrafos. Recomendamos incluir un README o un archivo con información sobre tu proyecto.
 
-#### Image
+#### Imagen
 
-Images can be clicked to enlarge :)
+Las imágenes se pueden hacer clic para ampliarlas :)
 
-![Dummy Image 1](https://picsum.photos/1366/768)
-![Dummy Image 2](https://picsum.photos/1200/400)
+![Imagen de ejemplo 1](https://picsum.photos/1366/768)  
+![Imagen de ejemplo 2](https://picsum.photos/1200/400)
 
-# Header 1
+# Encabezado 1
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+Este es un párrafo normal que sigue a un encabezado. GitHub es una plataforma de alojamiento de código para control de versiones y colaboración. Permite que tú y otros trabajen juntos en proyectos desde cualquier lugar.
 
-## Header 2
+## Encabezado 2
 
-> This is a blockquote following a header.
+> Esta es una cita en bloque que sigue a un encabezado.
 >
-> When something is important enough, you do it even if the odds are not in your favor.
+> Cuando algo es lo suficientemente importante, lo haces incluso si las probabilidades no están a tu favor.
 
-### Header 3
+### Encabezado 3
 
-> This is another blockquote following header 3
+> Esta es otra cita en bloque que sigue al encabezado 3
 
 ```js
-// Javascript code with syntax highlighting.
+// Código JavaScript con resaltado de sintaxis.
 var fun = function lang(l) {
   dateformat.i18n = require("./lang/" + l);
   return true;
@@ -43,78 +43,78 @@ var fun = function lang(l) {
 ```
 
 ```ruby
-# Ruby code with syntax highlighting
+# Código Ruby con resaltado de sintaxis
 GitHubPages::Dependencies.gems.each do |gem, version|
   s.add_dependency(gem, "= #{version}")
 end
 ```
 
-#### Header 4
+#### Encabezado 4
 
-- This is an unordered list following a header.
-- This is an unordered list following a header.
-- This is an unordered list following a header.
+- Esta es una lista no ordenada que sigue a un encabezado.
+- Esta es una lista no ordenada que sigue a un encabezado.
+- Esta es una lista no ordenada que sigue a un encabezado.
 
-##### Header 5
+##### Encabezado 5
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+1.  Esta es una lista ordenada que sigue a un encabezado.
+2.  Esta es una lista ordenada que sigue a un encabezado.
+3.  Esta es una lista ordenada que sigue a un encabezado.
 
-###### Header 6
+###### Encabezado 6
 
-| head1        | head two          | three |
-| :----------- | :---------------- | :---- |
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+| encabezado1     | encabezado dos      | tres |
+| :-------------- | :------------------ | :--- |
+| ok              | buenos peces suecos | bien |
+| sin existencias | buenos y muchos     | bien |
+| ok              | buenas `oreos`      | hmm  |
+| ok              | buen `zoute` drop   | rico |
 
-### There's a horizontal rule below this.
+### Hay una regla horizontal debajo de esto.
 
 ---
 
-### Here is an unordered list:
+### Aquí hay una lista no ordenada:
 
-- Item foo
-- Item bar
-- Item baz
-- Item zip
+- Elemento foo
+- Elemento bar
+- Elemento baz
+- Elemento zip
 
-### And an ordered list:
+### Y una lista ordenada:
 
-1.  Item one
-    1.  Item one
-    1.  Item two
-        1.  Item one
-        1.  Item two
-        1.  Item three
-    1.  Item three
-1.  Item four
-1.  Item two
-1.  Item three
-1.  Item four
+1.  Elemento uno
+    1.  Elemento uno
+    1.  Elemento dos
+        1.  Elemento uno
+        1.  Elemento dos
+        1.  Elemento tres
+    1.  Elemento tres
+1.  Elemento cuatro
+1.  Elemento dos
+1.  Elemento tres
+1.  Elemento cuatro
 
-### And a nested list:
+### Y una lista anidada:
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long.
-```
+- elemento nivel 1
+  - elemento nivel 2
+  - elemento nivel 2
+    - elemento nivel 3
+    - elemento nivel 3
+- elemento nivel 1
+  - elemento nivel 2
+  - elemento nivel 2
+  - elemento nivel 2
+- elemento nivel 1
+  - elemento nivel 2
+  - elemento nivel 2
+- elemento nivel 1
 
 ```
-The final element.
+Los bloques de código largos de una sola línea no deben ajustarse. Deben desplazarse horizontalmente si son demasiado largos. Los bloques de código largos de una sola línea no deben ajustarse. Deben desplazarse horizontalmente si son demasiado largos.
+```
+
+```
+El elemento final.
 ```
