@@ -13,7 +13,7 @@ Un pequeño tutorial para la instalación de MongoDB bajo Debian 13 (trixie).
 
 ## Instalación de paquetería necesaria
 
-```
+```bash
 sudo apt install curl gnupg
 ```
 
@@ -25,25 +25,25 @@ curl -fsSL https://pgp.mongodb.com/server-8.0.asc | sudo gpg --dearmor -o /usr/s
 
 ## Añadimos el repositorios al sources list
 
-```
+```bash
 echo "deb [signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg] https://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 ```
 
 ## Instalamos los paquetes de MongoDB
 
-```
+```bash
 sudo apt update
 sudo apt install -y mongodb-org
 ```
 
 ## Aseguramos que el servicio inicie al arrancar
 
-```
+```bash
 sudo systemctl enable mongod.service
 ```
 
 ## Acceder a la shell de Mongo
 
-```
+```bash
 mongosh
 ```
