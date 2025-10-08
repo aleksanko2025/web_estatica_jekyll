@@ -99,7 +99,7 @@ pip install gns3-gui gns3-server
 
 ## Arrancar la aplicación
 
-```
+```bash
 gns3
 ```
 
