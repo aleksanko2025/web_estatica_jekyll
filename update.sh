@@ -9,7 +9,7 @@ function push_to_origin(){
     #Primero hacemos el commit de los cambios a nuestro repositorio principal web_estatica_jekyll 
 
     cd /home/aleksanko/web_estatica_jekyll
-    jekyll build
+    bundle exec jekyll build     
     git add -A
     echo "Introduzca el mensaje para el commit a web_estatica_jekyll: "
     read mensaje
