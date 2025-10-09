@@ -10,9 +10,10 @@ function push_to_origin(){
 
     cd /home/aleksanko/web_estatica_jekyll
     jekyll build
+    git add -A
     echo "Introduzca el mensaje para el commit a web_estatica_jekyll: "
     read mensaje
-    git commit -am "$mensaje"
+    git commit -m "$mensaje"
     git push origin main
 
 
@@ -27,9 +28,10 @@ function push_to_web(){
 
     cd /home/aleksanko/kernel-panic-bykosenko
 
+    git add -A
     echo "Introduzca el mensaje para el commit a kernel-panic-bykosenko: "
     read mensaje
-    git commit -am "$mensaje"
+    git commit -m "$mensaje"
     git push origin main
 }
 
