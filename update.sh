@@ -24,7 +24,7 @@ function push_to_web(){
 
     #Una vez generado _site lo copiamos al directorio del repositorio kernel-panic-bykosenko
 
-    cp -u /home/aleksanko/web_estatica_jekyll/_site/*  /home/aleksanko/kernel-panic-bykosenko
+    cp -ur /home/aleksanko/web_estatica_jekyll/_site/*  /home/aleksanko/kernel-panic-bykosenko
 
     cd /home/aleksanko/kernel-panic-bykosenko
 
