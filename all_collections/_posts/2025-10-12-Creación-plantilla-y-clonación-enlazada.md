@@ -5,6 +5,8 @@ date: 2025-10-12
 categories: [IaC, Virt-Manager, 2ºASIR]
 ---
 
+![alt](https://pm1.aminoapps.com/6204/eae82405edfa2ffe445941d2e072ade2acfbd518_hq.jpg)
+
 Estos apuntes han sido elaborados a partir de la práctica personal, con inspiración y guía en los materiales creados por **José Domingo Muñoz**, a quien agradezco por compartir sus conocimientos y experiencias en este tema.
 
 Este documento explico cómo crear una **plantilla base de Debian 12** en KVM/QEMU y cómo realizar **clonaciones enlazadas** para ahorrar espacio en disco y acelerar la creación de nuevas máquinas virtuales.
@@ -17,7 +19,6 @@ Una vez terminada la instalación y configuración, **generalizamos la máquina*
 
 ```bash
 sudo virt-sysprep -d debian12 --hostname plantilla-debian12 --firstboot-command "dpkg-reconfigure openssh-server"
-
 ```
 
 ## Compactar la imagen
@@ -26,14 +27,12 @@ Compactamos la imagen para eliminar bloques vacíos y reducir su tamaño en disc
 
 ```bash
 sudo virt-sparsify --compress /var/lib/libvirt/images/debian12.qcow2 /var/lib/libvirt/images/plantilla-debian12-comprimida.qcow2
-
 ```
 
 Reemplazamos la imagen por la nueva comprimida:
 
 ```bash
 sudo mv /var/lib/libvirt/images/plantilla-debian12-comprimida.qcow2 /var/lib/libvirt/images/debian12.qcow2
-
 ```
 
 ### Proteger la plantilla
@@ -42,14 +41,12 @@ Para evitar encender accidentalmente la plantilla, configuramos la imagen como s
 
 ```bash
 sudo chmod 444 /var/lib/libvirt/images/debian12.qcow2
-
 ```
 
 Podemos también cambiar el nombre de la máquina para mayor claridad:
 
 ```bash
 virsh domrename debian12 plantilla-debian12
-
 ```
 
 ## Clonación enlazada
@@ -59,14 +56,12 @@ Este volumen no puede ser mayor que el tamaño de la plantilla.
 
 ```bash
 virsh domblkinfo plantilla-debian12 vda --human
-
 ```
 
 Creamos el nuevo volumen enlazado:
 
 ```bash
 virsh vol-create-as default debian12-backing.qcow2 5G --format qcow2 --backing-vol debian12.qcow2 --backing-vol-format qcow2
-
 ```
 
 También se puede hacer con qemu-img:
@@ -75,7 +70,6 @@ También se puede hacer con qemu-img:
 sudo qemu-img create -f qcow2 -b /var/lib/libvirt/images/debian12.qcow2 -F qcow2 /var/lib/libvirt/images/debian12-backing.qcow2 15G
 
 virsh pool-refresh default
-
 ```
 
 ## Creación de máquina a partir del backing store
@@ -101,5 +95,4 @@ virt-clone --connect=qemu:///system \
     --name otra-debian12 \
     --file /var/lib/libvirt/images/debian12-backing.qcow2 \
     --preserve-data
-
 ```
