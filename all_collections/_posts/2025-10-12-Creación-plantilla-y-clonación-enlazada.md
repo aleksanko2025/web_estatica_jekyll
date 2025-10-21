@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Creación plantilla y clonación enlazada
+title: Plantilla y clonación enlazada KVM/QEMU + libvirt
 date: 2025-10-12
-categories: [IaC, Virt-Manager, 2ºASIR]
+categories: [IaC, Virt-Manager, KVM, QEMU, 2ºASIR]
 ---
 
 ![alt](https://pm1.aminoapps.com/6204/eae82405edfa2ffe445941d2e072ade2acfbd518_hq.jpg)
